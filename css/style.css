@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004c5c;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background-color: #004c5c;
+    color: white;
+    padding: 50px 20px;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro-text {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.intro-text h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.intro-text h2 {
+    font-size: 64px;
+    margin: 10px 0;
+}
+
+.intro-text p {
+    font-size: 24px;
+    margin: 20px 0 0;
+}
+
+.intro-photo {
+    flex: 1;
+    text-align: right;
+}
+
+.intro-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+#About{
+    margin-top: 5%;
+     text-align: center;   
+    font-weight:700 ; 
+    color:#004c5c ;
+    }
+   #AboutPar1{
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 500; 
+   } 
+  #AboutPar2{
+    text-align: center;
+    font-weight: 500; 
+  } 
+  #Photos{
+    margin-top: 5%;
+     text-align: center;   
+    font-weight:700 ; 
+    color:#004c5c;
+  }
+  .video-container {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+video {
+    width: 50%;
+    height: auto; /* This maintains the aspect ratio */
+    border: 2px solid #004c5c; /* Optional: Add a border for styling */
+    border-radius: 10px; /* Optional: Add rounded corners for styling */
+}
+#ShowREEL{
+    margin-top: 5%;
+    text-align: center;   
+   font-weight:700 ; 
+   color:#004c5c ;
+}
+.video-container{
+   text-align: center;
+}
+#Photos {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 48px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+#Contact {
+    color: #004c5c;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 48px;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #004c5c;
+}
+
+.contact-card {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-card h2 {
+    margin-top: 0;
+}
+
+.contact-card a {
+    color: #004c5c;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media h2 {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+footer {
+    background-color: #004c5c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.modal-content {
+    background-color: #004c5c; /* Dark blue background */
+    color: yellow; /* Yellow text color */
+}
+
