@@ -245,3 +245,92 @@ footer a:hover {
     color: yellow; /* Yellow text color */
 }
 
+
+/* For small screens (e.g., mobile phones) */
+@media only screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .intro-text h1 {
+        font-size: 36px;
+    }
+
+    .intro-text h2 {
+        font-size: 48px;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+    }
+
+    .intro-photo img {
+        margin-top: 20px;
+    }
+
+    .video-container,
+    video {
+        width: 100%;
+    }
+
+    #Photos,
+    #Contact {
+        font-size: 36px;
+    }
+
+    .contact-card {
+        min-width: auto;
+    }
+}
+
+/* For medium screens (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .contact-card {
+        min-width: 250px;
+    }
+}
+
+/* For large screens (e.g., desktops) */
+@media only screen and (min-width: 992px) {
+    .nav-container,
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .intro-section,
+    .photo-gallery,
+    .contact-section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .contact-card {
+        min-width: 300px;
+    }
+}
+
