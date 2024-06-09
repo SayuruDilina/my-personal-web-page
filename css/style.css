@@ -56,16 +56,18 @@ main {
 .intro-section {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .intro-text {
     flex: 1;
     margin-right: 20px;
     text-align: left;
+    order: 1; /* Keeps text on the left on larger screens */
 }
 
 .intro-text h1 {
@@ -86,6 +88,7 @@ main {
 .intro-photo {
     flex: 1;
     text-align: right;
+    order: 2; /* Keeps photo on the right on larger screens */
 }
 
 .intro-photo img {
@@ -93,31 +96,37 @@ main {
     height: auto;
     border-radius: 5%;
 }
-#About{
+
+#About {
     margin-top: 5%;
-     text-align: center;   
-    font-weight:700 ; 
-    color:#004c5c ;
-    }
-   #AboutPar1{
+    text-align: center;   
+    font-weight: 700; 
+    color: #004c5c;
+}
+
+#AboutPar1 {
     margin-top: 5%;
     text-align: center;
-    font-weight: 500; 
-   } 
-  #AboutPar2{
+    font-weight: 500;
+} 
+
+#AboutPar2 {
     text-align: center;
-    font-weight: 500; 
-  } 
-  #Photos{
+    font-weight: 500;
+} 
+
+#Photos {
     margin-top: 5%;
-     text-align: center;   
-    font-weight:700 ; 
-    color:#004c5c;
-  }
-  .video-container {
+    text-align: center;   
+    font-weight: 700; 
+    color: #004c5c;
+}
+
+.video-container {
     width: 80%; /* Adjust the width as needed */
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 video {
@@ -126,19 +135,12 @@ video {
     border: 2px solid #004c5c; /* Optional: Add a border for styling */
     border-radius: 10px; /* Optional: Add rounded corners for styling */
 }
-#ShowREEL{
+
+#ShowREEL {
     margin-top: 5%;
     text-align: center;   
-   font-weight:700 ; 
-   color:#004c5c ;
-}
-.video-container{
-   text-align: center;
-}
-#Photos {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 48px;
+    font-weight: 700; 
+    color: #004c5c;
 }
 
 .photo-gallery {
@@ -160,6 +162,7 @@ video {
 .photo-gallery img:hover {
     transform: scale(1.05);
 }
+
 #Contact {
     color: #004c5c;
     text-align: center;
@@ -222,12 +225,13 @@ video {
 .social-media img:hover {
     transform: scale(1.2);
 }
+
 footer {
     background-color: #004c5c;
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -240,8 +244,121 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
 .modal-content {
     background-color: #004c5c; /* Dark blue background */
     color: yellow; /* Yellow text color */
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    main {
+        padding: 40px 10px;
+    }
+
+    .intro-section {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .intro-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .intro-photo {
+        text-align: center;
+        order: 1; /* Keep photo on top for smaller screens */
+    }
+
+    .intro-text {
+        order: 2; /* Keep text below the photo for smaller screens */
+    }
+
+    .intro-text h1, .intro-text h2, .intro-text p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .intro-section {
+        padding: 20px 10px;
+    }
+
+    .intro-photo {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card, .social-media {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 36px;
+    }
+
+    .intro-text h2 {
+        font-size: 48px;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 5px;
+    }
+
+    .contact-card {
+        padding: 10px;
+    }
+
+    .social-media img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
